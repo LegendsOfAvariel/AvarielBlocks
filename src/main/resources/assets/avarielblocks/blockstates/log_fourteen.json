@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "avarielblocks:log_fourteen" },
+        "axis=z":     { "model": "avarielblocks:log_fourteen", "x": 90 },
+        "axis=x":     { "model": "avarielblocks:log_fourteen", "x": 90, "y": 90 },
+        "axis=none":   { "model": "avarielblocks:log_fourteen_bark" }
+    }
+}

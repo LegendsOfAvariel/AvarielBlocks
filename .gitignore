@@ -23,5 +23,4 @@ run
 
 gradlew
 gradlew.bat
-build.gradle
 gradle
