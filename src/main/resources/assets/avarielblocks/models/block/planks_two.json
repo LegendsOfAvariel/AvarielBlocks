@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "avarielblocks:blocks/planks_two"
+        "all": "avarielblocks:blocks/planks/planks_two"
     }
 }

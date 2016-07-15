@@ -8,8 +8,15 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import rox.customblocks.AvarielTabs;
@@ -25,18 +32,6 @@ public class Logs extends BlockLog {
 		
 		//Sets the default state to up and down
 		this.setDefaultState(blockState.getBaseState().withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
-	}
-	
-	//Unnecessary override? TODO: check if useful
-	@Override
-	public int quantityDropped(Random rand) {
-		return 1;
-	}
-	
-	//Unnecessary override? TODO: check if useful
-	@Override
-	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return Item.getItemFromBlock(this);
 	}
 	
 	@Override
@@ -72,39 +67,39 @@ public class Logs extends BlockLog {
 		return new BlockStateContainer(this, new IProperty[] {LOG_AXIS});
 	}
 	
-	private static Block logOne = new Logs("log_one");
-	private static Block logTwo = new Logs("log_two");
-	private static Block logThree = new Logs("log_three");
-	private static Block logFour = new Logs("log_four");
-	private static Block logFive = new Logs("log_five");
-	private static Block logSix = new Logs("log_six");
-	private static Block logSeven = new Logs("log_seven");
-	private static Block logEight = new Logs("log_eight");
-	private static Block logNine = new Logs("log_nine");
-	private static Block logTen = new Logs("log_ten");
-	private static Block logEleven = new Logs("log_eleven");
-	private static Block logTwelve = new Logs("log_twelve");
-	private static Block logThirteen = new Logs("log_thirteen");
-	private static Block logFourteen = new Logs("log_fourteen");
-	private static Block logFifteen = new Logs("log_fifteen");
-	private static Block logSixteen = new Logs("log_sixteen");
+	public static Block logOne = new Logs("log_one");
+	public static Block logTwo = new Logs("log_two");
+	public static Block logThree = new Logs("log_three");
+	public static Block logFour = new Logs("log_four");
+	public static Block logFive = new Logs("log_five");
+	public static Block logSix = new Logs("log_six");
+	public static Block logSeven = new Logs("log_seven");
+	public static Block logEight = new Logs("log_eight");
+	public static Block logNine = new Logs("log_nine");
+	public static Block logTen = new Logs("log_ten");
+	public static Block logEleven = new Logs("log_eleven");
+	public static Block logTwelve = new Logs("log_twelve");
+	public static Block logThirteen = new Logs("log_thirteen");
+	public static Block logFourteen = new Logs("log_fourteen");
+	public static Block logFifteen = new Logs("log_fifteen");
+	public static Block logSixteen = new Logs("log_sixteen");
 	
-	private static ItemBlock logOneItem = (ItemBlock) new ItemBlock(logOne).setRegistryName("log_one");
-	private static ItemBlock logTwoItem = (ItemBlock) new ItemBlock(logTwo).setRegistryName("log_two");
-	private static ItemBlock logThreeItem = (ItemBlock) new ItemBlock(logThree).setRegistryName("log_three");
-	private static ItemBlock logFourItem = (ItemBlock) new ItemBlock(logFour).setRegistryName("log_four");
-	private static ItemBlock logFiveItem = (ItemBlock) new ItemBlock(logFive).setRegistryName("log_five");
-	private static ItemBlock logSixItem = (ItemBlock) new ItemBlock(logSix).setRegistryName("log_six");
-	private static ItemBlock logSevenItem = (ItemBlock) new ItemBlock(logSeven).setRegistryName("log_seven");
-	private static ItemBlock logEightItem = (ItemBlock) new ItemBlock(logEight).setRegistryName("log_eight");
-	private static ItemBlock logNineItem = (ItemBlock) new ItemBlock(logNine).setRegistryName("log_nine");
-	private static ItemBlock logTenItem = (ItemBlock) new ItemBlock(logTen).setRegistryName("log_ten");
-	private static ItemBlock logElevenItem = (ItemBlock) new ItemBlock(logEleven).setRegistryName("log_eleven");
-	private static ItemBlock logTwelveItem = (ItemBlock) new ItemBlock(logTwelve).setRegistryName("log_twelve");
-	private static ItemBlock logThirteenItem = (ItemBlock) new ItemBlock(logThirteen).setRegistryName("log_thirteen");
-	private static ItemBlock logFourteenItem = (ItemBlock) new ItemBlock(logFourteen).setRegistryName("log_fourteen");
-	private static ItemBlock logFifteenItem = (ItemBlock) new ItemBlock(logFifteen).setRegistryName("log_fifteen");
-	private static ItemBlock logSixteenItem = (ItemBlock) new ItemBlock(logSixteen).setRegistryName("log_sixteen");
+	public static ItemBlock logOneItem = (ItemBlock) new ItemBlock(logOne).setRegistryName("log_one");
+	public static ItemBlock logTwoItem = (ItemBlock) new ItemBlock(logTwo).setRegistryName("log_two");
+	public static ItemBlock logThreeItem = (ItemBlock) new ItemBlock(logThree).setRegistryName("log_three");
+	public static ItemBlock logFourItem = (ItemBlock) new ItemBlock(logFour).setRegistryName("log_four");
+	public static ItemBlock logFiveItem = (ItemBlock) new ItemBlock(logFive).setRegistryName("log_five");
+	public static ItemBlock logSixItem = (ItemBlock) new ItemBlock(logSix).setRegistryName("log_six");
+	public static ItemBlock logSevenItem = (ItemBlock) new ItemBlock(logSeven).setRegistryName("log_seven");
+	public static ItemBlock logEightItem = (ItemBlock) new ItemBlock(logEight).setRegistryName("log_eight");
+	public static ItemBlock logNineItem = (ItemBlock) new ItemBlock(logNine).setRegistryName("log_nine");
+	public static ItemBlock logTenItem = (ItemBlock) new ItemBlock(logTen).setRegistryName("log_ten");
+	public static ItemBlock logElevenItem = (ItemBlock) new ItemBlock(logEleven).setRegistryName("log_eleven");
+	public static ItemBlock logTwelveItem = (ItemBlock) new ItemBlock(logTwelve).setRegistryName("log_twelve");
+	public static ItemBlock logThirteenItem = (ItemBlock) new ItemBlock(logThirteen).setRegistryName("log_thirteen");
+	public static ItemBlock logFourteenItem = (ItemBlock) new ItemBlock(logFourteen).setRegistryName("log_fourteen");
+	public static ItemBlock logFifteenItem = (ItemBlock) new ItemBlock(logFifteen).setRegistryName("log_fifteen");
+	public static ItemBlock logSixteenItem = (ItemBlock) new ItemBlock(logSixteen).setRegistryName("log_sixteen");
 	
 	public static void serverInit() {
 		register(logOne, logOneItem);
@@ -145,16 +140,16 @@ public class Logs extends BlockLog {
 	}
 	
 	//Applies textures and models to a given block and it's item form.
-		public static void render(Block block) {
-			Item item = Item.getItemFromBlock(block);
-			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-		}
+	public static void render(Block block) {
+		Item item = Item.getItemFromBlock(block);
+		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+	}
 		
-		//Registers a block and itemblock pair. This exists for the sake of compactness.
-		public static void register(Block block, ItemBlock itemBlock) {
-			GameRegistry.register(block);
-			GameRegistry.register(itemBlock);
-		}
+	//Registers a block and itemblock pair. This exists for the sake of compactness.
+	public static void register(Block block, ItemBlock itemBlock) {
+		GameRegistry.register(block);
+		GameRegistry.register(itemBlock);
+	}
 
 	
 }

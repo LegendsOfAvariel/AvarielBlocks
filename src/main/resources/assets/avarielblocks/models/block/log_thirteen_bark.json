@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "avarielblocks:blocks/log_thirteen_side"
+        "all": "avarielblocks:blocks/logs/log_thirteen_side"
     }
 }

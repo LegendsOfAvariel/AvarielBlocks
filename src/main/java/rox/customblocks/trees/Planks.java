@@ -38,43 +38,43 @@ public class Planks extends Block {
 	
 	//Blocks
 	//To add a new block, just initialize a new instance of Planks and give it a registry name.
-	private static Block planksOne = new Planks("planks_one");
-	private static Block planksTwo = new Planks("planks_two");
-	private static Block planksThree = new Planks("planks_three");
-	private static Block planksFour = new Planks("planks_four");
-	private static Block planksFive = new Planks("planks_five");
-	private static Block planksSix = new Planks("planks_six");
-	private static Block planksSeven = new Planks("planks_seven");
-	private static Block planksEight = new Planks("planks_eight");
-	private static Block planksNine = new Planks("planks_nine");
-	private static Block planksTen = new Planks("planks_ten");
-	private static Block planksEleven = new Planks("planks_eleven");
-	private static Block planksTwelve = new Planks("planks_twelve");
-	private static Block planksThirteen = new Planks("planks_thirteen");
-	private static Block planksFourteen = new Planks("planks_fourteen");
-	private static Block planksFifteen = new Planks("planks_fifteen");
-	private static Block planksSixteen = new Planks("planks_sixteen");
+	public static Block planksOne = new Planks("planks_one");
+	public static Block planksTwo = new Planks("planks_two");
+	public static Block planksThree = new Planks("planks_three");
+	public static Block planksFour = new Planks("planks_four");
+	public static Block planksFive = new Planks("planks_five");
+	public static Block planksSix = new Planks("planks_six");
+	public static Block planksSeven = new Planks("planks_seven");
+	public static Block planksEight = new Planks("planks_eight");
+	public static Block planksNine = new Planks("planks_nine");
+	public static Block planksTen = new Planks("planks_ten");
+	public static Block planksEleven = new Planks("planks_eleven");
+	public static Block planksTwelve = new Planks("planks_twelve");
+	public static Block planksThirteen = new Planks("planks_thirteen");
+	public static Block planksFourteen = new Planks("planks_fourteen");
+	public static Block planksFifteen = new Planks("planks_fifteen");
+	public static Block planksSixteen = new Planks("planks_sixteen");
 	
 	//Blocks in item form
 	/* To create a new ItemBlock, initialize a new ItemBlock and cast it as ItemBlock (I don't know why you
 	 * have to, but you do.), then set the registry name to the same thing  as it's block counterpart.
 	 * DO NOT try to set the registry name of the ItemBlock using the registry name of the Block! It won't work, so set it manually.  */
-	private static ItemBlock planksOneItem = (ItemBlock) new ItemBlock(planksOne).setRegistryName("planks_one");
-	private static ItemBlock planksTwoItem = (ItemBlock) new ItemBlock(planksTwo).setRegistryName("planks_two");
-	private static ItemBlock planksThreeItem = (ItemBlock) new ItemBlock(planksThree).setRegistryName("planks_three");
-	private static ItemBlock planksFourItem = (ItemBlock) new ItemBlock(planksFour).setRegistryName("planks_four");
-	private static ItemBlock planksFiveItem = (ItemBlock) new ItemBlock(planksFive).setRegistryName("planks_five");
-	private static ItemBlock planksSixItem = (ItemBlock) new ItemBlock(planksSix).setRegistryName("planks_six");
-	private static ItemBlock planksSevenItem = (ItemBlock) new ItemBlock(planksSeven).setRegistryName("planks_seven");
-	private static ItemBlock planksEightItem = (ItemBlock) new ItemBlock(planksEight).setRegistryName("planks_eight");
-	private static ItemBlock planksNineItem = (ItemBlock) new ItemBlock(planksNine).setRegistryName("planks_nine");
-	private static ItemBlock planksTenItem = (ItemBlock) new ItemBlock(planksTen).setRegistryName("planks_ten");
-	private static ItemBlock planksElevenItem = (ItemBlock) new ItemBlock(planksEleven).setRegistryName("planks_eleven");
-	private static ItemBlock planksTwelveItem = (ItemBlock) new ItemBlock(planksTwelve).setRegistryName("planks_twelve");
-	private static ItemBlock planksThirteenItem = (ItemBlock) new ItemBlock(planksThirteen).setRegistryName("planks_thirteen");
-	private static ItemBlock planksFourteenItem = (ItemBlock) new ItemBlock(planksFourteen).setRegistryName("planks_fourteen");
-	private static ItemBlock planksFifteenItem = (ItemBlock) new ItemBlock(planksFifteen).setRegistryName("planks_fifteen");
-	private static ItemBlock planksSixteenItem = (ItemBlock) new ItemBlock(planksSixteen).setRegistryName("planks_sixteen");
+	public static ItemBlock planksOneItem = (ItemBlock) new ItemBlock(planksOne).setRegistryName("planks_one");
+	public static ItemBlock planksTwoItem = (ItemBlock) new ItemBlock(planksTwo).setRegistryName("planks_two");
+	public static ItemBlock planksThreeItem = (ItemBlock) new ItemBlock(planksThree).setRegistryName("planks_three");
+	public static ItemBlock planksFourItem = (ItemBlock) new ItemBlock(planksFour).setRegistryName("planks_four");
+	public static ItemBlock planksFiveItem = (ItemBlock) new ItemBlock(planksFive).setRegistryName("planks_five");
+	public static ItemBlock planksSixItem = (ItemBlock) new ItemBlock(planksSix).setRegistryName("planks_six");
+	public static ItemBlock planksSevenItem = (ItemBlock) new ItemBlock(planksSeven).setRegistryName("planks_seven");
+	public static ItemBlock planksEightItem = (ItemBlock) new ItemBlock(planksEight).setRegistryName("planks_eight");
+	public static ItemBlock planksNineItem = (ItemBlock) new ItemBlock(planksNine).setRegistryName("planks_nine");
+	public static ItemBlock planksTenItem = (ItemBlock) new ItemBlock(planksTen).setRegistryName("planks_ten");
+	public static ItemBlock planksElevenItem = (ItemBlock) new ItemBlock(planksEleven).setRegistryName("planks_eleven");
+	public static ItemBlock planksTwelveItem = (ItemBlock) new ItemBlock(planksTwelve).setRegistryName("planks_twelve");
+	public static ItemBlock planksThirteenItem = (ItemBlock) new ItemBlock(planksThirteen).setRegistryName("planks_thirteen");
+	public static ItemBlock planksFourteenItem = (ItemBlock) new ItemBlock(planksFourteen).setRegistryName("planks_fourteen");
+	public static ItemBlock planksFifteenItem = (ItemBlock) new ItemBlock(planksFifteen).setRegistryName("planks_fifteen");
+	public static ItemBlock planksSixteenItem = (ItemBlock) new ItemBlock(planksSixteen).setRegistryName("planks_sixteen");
 	
 	public static void serverInit() { //Register everything here.
 		register(planksOne, planksOneItem);

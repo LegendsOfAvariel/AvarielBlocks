@@ -1,7 +1,7 @@
 {
     "parent": "block/cube_column",
     "textures": {
-        "end": "avarielblocks:blocks/log_thirteen_end",
-        "side": "avarielblocks:blocks/log_thirteen_side"
+        "end": "avarielblocks:blocks/logs/log_thirteen_end",
+        "side": "avarielblocks:blocks/logs/log_thirteen_side"
     }
 }
