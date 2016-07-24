@@ -6,6 +6,7 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks.EnumType;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
@@ -21,34 +22,19 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rox.customblocks.AvarielTabs;
 
-public class Leaves extends BlockLeaves {
+public class Leaves extends Block {
 	
 	public Leaves(String name) {
-		super();
+		super(Material.leaves);
 		this.setRegistryName(name);
 		this.setUnlocalizedName(this.getRegistryName().toString());
 		this.setCreativeTab(AvarielTabs.tabAvarielTrees);
 	}
 	
 	@Override
-	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		if (rand.nextInt(5) == 5) return Items.stick; else return null;
-	}
-
-	@Override
-	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
-		return null;
-	}
-
-	@Override
-	public EnumType getWoodType(int meta) {
-		return null;
-	}
-	
-	@Override
 	public boolean isOpaqueCube(IBlockState state)
     {
-        return false; //Force fancy due to buggy textures on fast. I don't know anymore; it's buggy either way.
+        return false;
     }
 	
 	@Override
